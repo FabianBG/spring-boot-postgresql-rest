@@ -1,21 +1,11 @@
-package com.fabianbg.domain.model;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package com.fabianbg.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
 @Data
-@Entity
-@Table(name = "developer")
-public class Developer {
-
-    @Id
-    @JsonProperty("id")
-    private String id;
+public class DeveloperUpdateDTO {
 
     @JsonProperty("nombres_completos")
     private String names;
