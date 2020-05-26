@@ -22,12 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("developers")
 public class DeveloperController {
 
-    private IDeveloperService developerService;
-
     @Autowired
-    public DeveloperController(final IDeveloperService developerService) {
-        this.developerService = developerService;
-    }
+    private IDeveloperService developerService;
 
     @GetMapping()
     public ResponseEntity<List<Developer>> getAllEndpoint() {

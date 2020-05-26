@@ -14,12 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class DeveloperServiceImpl implements IDeveloperService {
 
-    private IDeveloperPostgresRepo developerRepo;
-
     @Autowired
-    public DeveloperServiceImpl(IDeveloperPostgresRepo developerRepo) {
-        this.developerRepo = developerRepo;
-    }
+    private IDeveloperPostgresRepo developerRepo;
 
     @Override
     public Developer create(Developer data) {
