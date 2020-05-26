@@ -18,6 +18,6 @@ RUN addgroup -S app && adduser -S app -G app
 
 USER app:app
 
-COPY --chown=app:app --from=build /home/gradle/src/build/libs/*.jar app.jar
+COPY --chown=app:app --from=builder /home/gradle/src/build/libs/*.jar app.jar
 
 ENTRYPOINT ["java","-jar","/app.jar"]
